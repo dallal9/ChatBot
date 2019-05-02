@@ -26,5 +26,5 @@ rasa-app-data/
   - current/
     - dialogue/            The trained rasa_core model
     - nlu/                 The trained rasa_nlu model
-- project/                  I'm not sure yet
+- project/                 I'm not sure yet
 ```
