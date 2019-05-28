@@ -7,6 +7,8 @@
     "intent_name",
     "intent_thanks",
     "entity_name",
+    "slot_first_name_0",
+    "slot_last_name_0",
     "slot_name_0",
     "prev_action_listen",
     "prev_action_restart",
@@ -20,6 +22,7 @@
     "prev_utter_thanks",
     "prev_utter_greet",
     "prev_utter_goodbye",
-    "prev_action_joke"
+    "prev_action_joke",
+    "prev_action_messenger_name"
   ]
 }

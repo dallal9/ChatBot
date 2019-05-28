@@ -6,6 +6,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
+- action_messenger_name
 config:
   store_entities_as_slots: true
 entities:
@@ -25,6 +26,14 @@ intents:
 - name:
     use_entities: true
 slots:
+  first_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  last_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   name:
     auto_fill: true
     initial_value: null
@@ -33,7 +42,7 @@ templates:
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:
-  - text: Nice to you meet you {name}. How can I help?
+  - text: Nice to you meet you {first_name} {last_name}. How can I help?
   utter_name:
   - text: Hey there! Tell me your name.
   utter_thanks:
