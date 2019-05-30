@@ -7,10 +7,18 @@ actions:
 - utter_goodbye
 - action_joke
 - action_messenger_name
+- action_search_link
 config:
   store_entities_as_slots: true
 entities:
 - name
+- property_payment
+- property_type
+- property_location
+- property_bedrooms
+- property_garages
+- property_bathrooms
+- property_basement
 forms: []
 intents:
 - greet:
@@ -25,6 +33,8 @@ intents:
     use_entities: true
 - name:
     use_entities: true
+- search:
+    use_entities: true
 slots:
   first_name:
     auto_fill: true
@@ -38,6 +48,46 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
+  property_basement:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  property_bathrooms:
+    auto_fill: true
+    initial_value: null
+    max_value: 1.0
+    min_value: 0
+    type: rasa_core.slots.FloatSlot
+  property_bedrooms:
+    auto_fill: true
+    initial_value: null
+    max_value: 1.0
+    min_value: 0
+    type: rasa_core.slots.FloatSlot
+  property_garages:
+    auto_fill: true
+    initial_value: null
+    max_value: 1.0
+    min_value: 0
+    type: rasa_core.slots.FloatSlot
+  property_location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  property_payment:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - sale
+    - rentals
+  property_type:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - house
+    - condos
 templates:
   utter_goodbye:
   - text: Talk to you later!

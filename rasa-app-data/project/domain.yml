@@ -5,10 +5,18 @@ intents:
 - deny
 - joke
 - name
+- search
 
 
 entities:
 - name
+- property_payment
+- property_type
+- property_location
+- property_bedrooms
+- property_garages
+- property_bathrooms
+- property_basement
 
 
 slots:
@@ -18,6 +26,29 @@ slots:
     type: text
   name:
     type: text
+  property_payment:
+    type: categorical
+    values:
+      - sale
+      - rentals
+  property_type:
+    type: categorical
+    values:
+      - house
+      - condos
+  property_location:
+    type: text
+  property_bedrooms:
+    type: float
+    min_value: 0
+  property_garages:
+    type: float
+    min_value: 0
+  property_bathrooms:
+    type: float
+    min_value: 0
+  property_basement:
+    type: bool
 
 
 actions:
@@ -27,6 +58,7 @@ actions:
 - utter_goodbye
 - action_joke
 - action_messenger_name
+- action_search_link
 
 
 templates:

@@ -808,10 +808,161 @@
       {
         "intent": "joke",
         "text": "I need to hear a joke"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 13,
+            "value": "sale",
+            "entity": "property_payment"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "value": "house",
+            "entity": "property_type"
+          },
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Chicago",
+            "entity": "property_location"
+          }
+        ],
+        "text": "I want to buy an house in Chicago"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "condos",
+            "entity": "property_type"
+          },
+          {
+            "start": 28,
+            "end": 38,
+            "value": "2",
+            "entity": "property_bedrooms"
+          },
+          {
+            "start": 42,
+            "end": 48,
+            "value": "Cicero",
+            "entity": "property_location"
+          },
+          {
+            "start": 53,
+            "end": 57,
+            "value": "sale",
+            "entity": "property_payment"
+          }
+        ],
+        "text": "Do you have any condos with 2 bedrooms in Cicero for sale?"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "rentals",
+            "entity": "property_payment"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "1",
+            "entity": "property_garages"
+          },
+          {
+            "start": 15,
+            "end": 26,
+            "value": "3",
+            "entity": "property_bathrooms"
+          },
+          {
+            "start": 28,
+            "end": 41,
+            "value": "True",
+            "entity": "property_basement"
+          },
+          {
+            "start": 45,
+            "end": 56,
+            "value": "Springfield",
+            "entity": "property_location"
+          }
+        ],
+        "text": "rent 1 garage, 3 bathrooms, with basement in Springfield"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "rentals",
+            "entity": "property_payment"
+          },
+          {
+            "start": 14,
+            "end": 19,
+            "value": "house",
+            "entity": "property_type"
+          },
+          {
+            "start": 23,
+            "end": 33,
+            "value": "Arrowsmith",
+            "entity": "property_location"
+          }
+        ],
+        "text": "I will rent a house in Arrowsmith"
       }
     ],
     "regex_features": [],
     "lookup_tables": [],
-    "entity_synonyms": []
+    "entity_synonyms": [
+      {
+        "value": "sale",
+        "synonyms": [
+          "buy"
+        ]
+      },
+      {
+        "value": "2",
+        "synonyms": [
+          "2 bedrooms"
+        ]
+      },
+      {
+        "value": "rentals",
+        "synonyms": [
+          "rent"
+        ]
+      },
+      {
+        "value": "1",
+        "synonyms": [
+          "1 garage"
+        ]
+      },
+      {
+        "value": "3",
+        "synonyms": [
+          "3 bathrooms"
+        ]
+      },
+      {
+        "value": "True",
+        "synonyms": [
+          "with basement"
+        ]
+      }
+    ]
   }
 }

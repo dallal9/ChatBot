@@ -11,6 +11,9 @@
         "first_name"
       ]
     },
+    "utter_greet": {
+      "slots": []
+    },
     "utter_goodbye": {
       "slots": []
     },
@@ -20,7 +23,7 @@
     "utter_thanks": {
       "slots": []
     },
-    "utter_greet": {
+    "action_search_link": {
       "slots": []
     }
   },
@@ -38,7 +41,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190528-092115",
+  "trained_at": "20190530-150848",
   "rasa_core": "0.14.1",
   "tensorflow": "1.13.1",
   "sklearn": "0.20.2"

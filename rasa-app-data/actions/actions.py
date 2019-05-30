@@ -17,6 +17,25 @@ logger = logging.getLogger(__name__)
 with open("config/credentials.yml") as f:
     credentials = yaml.safe_load(f)
 
+class ActionSearchLink(Action):
+    def name(self):
+        return "action_search_link"
+
+    def run(self, dispatcher, tracker, domain):
+        slots = tracker.current_slot_values()
+
+        logger.error("SLOTS: {}".format(slots))
+
+        payment = slots["property_payment"]
+        typ = slots["property_type"]
+        location = slots["property_location"]
+        search_link = "https://propertyup.com/{}/{}-{},illinois".format(
+            payment,
+            typ,
+            location
+        )
+        dispatcher.utter_message(search_link)
+
 
 class ActionMessengerName(Action):
     def name(self):
