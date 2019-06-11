@@ -42,6 +42,7 @@
     "prev_utter_goodbye",
     "prev_action_joke",
     "prev_action_messenger_name",
-    "prev_action_search_link"
+    "prev_action_search_link",
+    "prev_action_custom_fallback"
   ]
 }

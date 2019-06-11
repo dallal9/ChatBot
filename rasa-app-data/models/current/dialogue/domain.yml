@@ -8,6 +8,7 @@ actions:
 - action_joke
 - action_messenger_name
 - action_search_link
+- action_custom_fallback
 config:
   store_entities_as_slots: true
 entities:
@@ -89,6 +90,8 @@ slots:
     - house
     - condos
 templates:
+  utter_default:
+  - text: Sorry, I don't understand that
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:

@@ -59,6 +59,7 @@ actions:
 - action_joke
 - action_messenger_name
 - action_search_link
+- action_custom_fallback
 
 
 templates:
@@ -74,3 +75,5 @@ templates:
   utter_thanks:
   - text: "My pleasure."
   
+  utter_default:
+  - text: "Sorry, I don't understand that"

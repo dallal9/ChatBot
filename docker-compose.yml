@@ -9,7 +9,8 @@ services:
       - "./rasa-app-data/models/current/dialogue:/app/model"
       - "./rasa-app-data/config:/app/config"
       - "./rasa-app-data/project:/app/project"
-    command: start -d ./model -u current/nlu --endpoints config/endpoints.yml --credentials config/credentials.yml
+      - "./rasa-app-data/logs:/app/logs"
+    command: start -d ./model -u current/nlu --endpoints config/endpoints.yml --credentials config/credentials.yml --log_file log.txt
   action_server:
     build: ./rasa_core_sdk
     image: rasa_core_sdk:latest

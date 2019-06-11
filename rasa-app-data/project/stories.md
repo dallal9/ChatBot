@@ -15,9 +15,11 @@
  
 ## story_name
 * name{"name":"Sam"}
+ - action_messenger_name
+ - slot{"first_name": "UnknownFirstName"}
+ - slot{"last_name": "UnknownLastName"}
  - utter_greet
  
-
 ## story_joke_01
 * joke
  - action_joke
@@ -26,6 +28,9 @@
 * greet
  - utter_name
 * name{"name":"Lucy"} <!--- User response with an entity. In this case it represents user message 'My name is Lucy.' --> 
+ - action_messenger_name
+ - slot{"first_name": "UnknownFirstName"}
+ - slot{"last_name": "UnknownLastName"}
  - utter_greet
 * joke
  - action_joke

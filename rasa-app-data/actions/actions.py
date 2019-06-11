@@ -9,7 +9,12 @@ import requests
 import json
 import yaml
 from rasa_core_sdk import Action
+
 from rasa_core_sdk.events import SlotSet
+from typing import List, Text, Optional, Dict, Any
+
+
+
 
 logger = logging.getLogger(__name__)
 
@@ -64,4 +69,16 @@ class ActionJoke(Action):
         )  # make an api call
         joke = request["value"]  # extract a joke from returned json response
         dispatcher.utter_message(joke)  # send the message back to the user
+        return []
+
+
+class ActionCostumFallback(Action):
+    def name(self):
+        # define the name of the action which can then be included in training stories
+        return "action_custom_fallback"
+
+    def run(self, dispatcher, tracker, domain):
+        message = tracker.latest_message["text"]
+        # send the message back to the user
+        dispatcher.utter_message("sorry, I don't understand, "+str(message))
         return []
