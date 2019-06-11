@@ -60,6 +60,7 @@ actions:
 - action_messenger_name
 - action_search_link
 - action_custom_fallback
+- action_log
 
 
 templates:

@@ -19,6 +19,7 @@ services:
     volumes:
       - "./rasa-app-data/actions:/app/actions"
       - "./rasa-app-data/config:/app/config"
+      - "./rasa-app-data/logs:/app/logs"
   rasa_nlu:
     image: rasa/rasa_nlu:stable-full
     ports:

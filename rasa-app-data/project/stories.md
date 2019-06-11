@@ -3,14 +3,17 @@
  - action_messenger_name
  - slot{"first_name": "UnknownFirstName"}
  - slot{"last_name": "UnknownLastName"}
+ - action_log
  - utter_greet <!--- The response of the chatbot expressed as an action. In this case it represents chatbot's response 'Hello, how can I help?' --> 
  
 ## story_goodbye
 * goodbye
+ - action_log
  - utter_goodbye
 
 ## story_thanks
 * thanks
+ - action_log
  - utter_thanks
  
 ## story_name
@@ -18,27 +21,35 @@
  - action_messenger_name
  - slot{"first_name": "UnknownFirstName"}
  - slot{"last_name": "UnknownLastName"}
+ - action_log
  - utter_greet
  
 ## story_joke_01
 * joke
+ - action_log
  - action_joke
  
 ## story_joke_02
 * greet
+ - action_log
  - utter_name
 * name{"name":"Lucy"} <!--- User response with an entity. In this case it represents user message 'My name is Lucy.' --> 
  - action_messenger_name
  - slot{"first_name": "UnknownFirstName"}
  - slot{"last_name": "UnknownLastName"}
+ - action_log
  - utter_greet
 * joke
+ - action_log
  - action_joke
 * thanks
+ - action_log
  - utter_thanks
 * goodbye
+ - action_log
  - utter_goodbye 
 
 ## story_search
 * search
+ - action_log
  - action_search_link

@@ -11,9 +11,6 @@
         "first_name"
       ]
     },
-    "utter_thanks": {
-      "slots": []
-    },
     "utter_goodbye": {
       "slots": []
     },
@@ -24,6 +21,9 @@
       "slots": []
     },
     "action_joke": {
+      "slots": []
+    },
+    "utter_thanks": {
       "slots": []
     }
   },
@@ -41,8 +41,8 @@
     "rasa_core.policies.form_policy.FormPolicy",
     "rasa_core.policies.fallback.FallbackPolicy"
   ],
-  "trained_at": "20190611-094013",
-  "rasa_core": "0.14.4",
+  "trained_at": "20190611-204924",
+  "rasa_core": "0.14.5",
   "tensorflow": "1.13.1",
   "sklearn": "0.20.2"
 }

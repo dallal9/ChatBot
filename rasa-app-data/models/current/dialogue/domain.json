@@ -43,6 +43,7 @@
     "prev_action_joke",
     "prev_action_messenger_name",
     "prev_action_search_link",
-    "prev_action_custom_fallback"
+    "prev_action_custom_fallback",
+    "prev_action_log"
   ]
 }
